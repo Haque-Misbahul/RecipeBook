@@ -1,17 +1,16 @@
-import { EventEmitter, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { Recipe } from "./recipe.model";
 import { Ingredient } from "../shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 
-@Injectable()
-export class RecipeService{
 
-    recipeSelected = new EventEmitter<Recipe>();
+@Injectable()
+export class RecipeService{ 
 
     private recipes: Recipe [] = [
         new Recipe(
         'Medium-Rare Steak', 
-        'A medium-rare steak has a warm, red center that oozes with juicy, beef-forward flavor.', 
+        'A medium-rare steak has a  juicy beef- forward flavor.', 
         'https://www.tasteofhome.com/wp-content/uploads/2019/01/medium-rare-steak-shutterstock_706040446.jpg',
         [
             new Ingredient('Meat', 1),
@@ -20,7 +19,7 @@ export class RecipeService{
       
         new Recipe(
         'Traditonal Biriyani', 
-        'Biriyani is the most loved dish by all. Blended with the fragrance of spices and aromatic rice.', 
+        'Biriyani is the most loved dish by all.', 
         'https://images.slurrp.com/prodarticles/b3rhx2ap4vf.webp',
         [
             new Ingredient('Meat', 1),
